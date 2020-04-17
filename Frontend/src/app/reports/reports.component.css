@@ -6,3 +6,9 @@ table {
     font-size: medium;
     font-weight: bold;
   }
+
+  .add-new{
+    margin-bottom: 10px;
+    background-color: darkcyan;
+    color: white;
+  }

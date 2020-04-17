@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ReportsService } from '../Services/reports.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { AddReportComponent } from './add-report/add-report.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-reports',
@@ -9,8 +11,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class ReportsComponent implements OnInit {
   reportsList: any[];
-  displayedColumns: string[] = ['logNumber', 'quantity', 'percentage', 'price'];
-  constructor(public reports : ReportsService) { }
+  displayedColumns: string[] = ['logNumber', 'quantity', 'percentage', 'price', 'action'];
+  constructor(public reports : ReportsService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.getReports();
@@ -24,5 +26,21 @@ this.reports.getReports().subscribe((response : any) => {
 (errpr: HttpErrorResponse ) =>{
 console.log(errpr);
 })
+  }
+
+  
+  openReportsDialog(report) {
+    const dialogRef = this.dialog.open(AddReportComponent, {
+      height: "70%",
+      hasBackdrop: true,
+      // panelClass: 'company-registration-container',
+      direction: "ltr",
+      data: {report},
+      disableClose: true,
+    });
+    dialogRef.afterClosed().subscribe(() => {
+      console.log("The dialog was closed");
+      this.getReports();
+    });
   }
 }

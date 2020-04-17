@@ -1,0 +1,52 @@
+<div>
+    <div fxLayout="row" fxLayoutGap="10px" class="dialog-header" fxLayoutAlign="end">
+        <a (click)="closeReportForm()" style="float: right;">
+            <mat-icon>clear</mat-icon>
+        </a>
+        <div style="font-size: 25px;">Add/Update Report</div>
+    </div>
+<div>
+<form [formGroup]="reportsForm" (ngSubmit)="saveReport()" class="form">
+    
+      <mat-form-field class="full-width" (click)="$event.stopPropagation();">
+        <mat-select formControlName="supplierId" placeholder="Supplier" (selectionChange)="autoSelectLogNumber()">
+          <mat-option [value]="supplier.id" *ngFor="let supplier of suppliersList">
+            {{supplier.firstName}} {{supplier.lastName}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="!reportsForm.get('supplierId').hasError('required')">
+            Supplier is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Log Number" formControlName="logNumber" required>
+        <mat-error *ngIf="!reportsForm.get('logNumber').hasError('required')">
+            Log Number is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input type="number" step="0.01" matInput placeholder="Quantity" formControlName="quantity" (change)="calculatePrice()" required>
+        <mat-error *ngIf="!reportsForm.get('quantity').hasError('required')">
+            Quantity is required
+        </mat-error>
+      </mat-form-field>
+       
+      <mat-form-field class="form-element">
+          <input type="number" step="0.01" matInput placeholder="Percentage" formControlName="percentage" (change)="calculatePrice()" required>
+          <mat-error *ngIf="!reportsForm.get('percentage').hasError('required')">
+          Percentage is required
+          </mat-error>
+        </mat-form-field>
+    
+        <mat-form-field class="form-element">
+            <input type="number" step="0.01" matInput placeholder="Price" formControlName="price" required>
+            <mat-error *ngIf="!reportsForm.get('price').hasError('required')">
+              Price is required
+            </mat-error>
+          </mat-form-field>
+    
+    <div class="form-element">
+      <button mat-raised-button type="submit" class="custom-btn" [disabled]="!reportsForm.valid">Submit Form</button>
+    </div>
+
+  </form>

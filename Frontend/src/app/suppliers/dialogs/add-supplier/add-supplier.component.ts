@@ -49,39 +49,6 @@ export class AddSupplierComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  clearForm1() {
-    // this.isAnyOperationIsInprogress = false;
-    this.supplierForm = new FormGroup({
-        firstName: new FormControl(this.supplier.firstName,
-            Validators.compose([
-                Validators.required,
-            ])
-        ),
-        lastName: new FormControl(this.supplier.lastName,
-          Validators.compose([
-              Validators.required,
-          ])
-      ),
-        address: new FormControl(this.supplier.address,
-          Validators.compose([
-              Validators.required,
-          ])
-      ),               
-      mobileNumber: new FormControl(this.supplier.mobileNumber,
-        Validators.compose([
-            Validators.required,
-        ]),
-        
-    ),
-    logNumber: new FormControl(this.supplier.logNumber,
-      Validators.compose([
-          Validators.required,
-      ]),
-      
-  )
-    })
-  }
-
   
   clearForm() {
     // this.isAnyOperationIsInprogress = false;

@@ -9,7 +9,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 BEGIN TRY
 SELECT dr.Id, SupplierId, sp.LogNumber, (sp.FirstName + ' ' + sp.LastName) as SupplierName, Quantity, Price, [Percentage], DR.CreateDateTime, DR.UpdateDateTime  FROM DailyReports dr
 join Suppliers as sp on sp.Id = dr.SupplierId
- where DR.CreateDateTime = @Date
+ --where DR.CreateDateTime = @Date
 END TRY
    BEGIN CATCH        
         SELECT ERROR_NUMBER() AS ErrorNumber,

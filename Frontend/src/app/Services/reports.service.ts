@@ -17,4 +17,11 @@ export class ReportsService {
     return this.http.get(baseUrl + "DailyReportsApi/GetDailyReports", httpOptions)
   }
   
+  upsertReport(report: any){
+    const httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+
+    return this.http.post(baseUrl + "api/DailyReportsApi/AddDailyReport", report, httpOptions);
+  }
 }

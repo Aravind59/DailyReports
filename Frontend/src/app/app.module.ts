@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider'
-import { MatDialogModule } from '@angular/material'
+import { MatDialogModule, MatSelectModule } from '@angular/material'
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -27,6 +27,7 @@ import { RegistartionComponent } from './registartion/registartion.component';
 import { SuppliersComponent } from './suppliers/suppliers.component';
 import { AddSupplierComponent } from './suppliers/dialogs/add-supplier/add-supplier.component';
 import { ConfirmationDialogComponent } from './Common-dialogs/confirmation-dialog/confirmation-dialog.component';
+import { AddReportComponent } from './reports/add-report/add-report.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ConfirmationDialogComponent } from './Common-dialogs/confirmation-dialo
     RegistartionComponent,
     SuppliersComponent,
     AddSupplierComponent,
-    ConfirmationDialogComponent    
+    ConfirmationDialogComponent,
+    AddReportComponent    
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { ConfirmationDialogComponent } from './Common-dialogs/confirmation-dialo
     ReactiveFormsModule,
     MatInputModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
     
   ],
   providers: [{
@@ -66,7 +69,7 @@ import { ConfirmationDialogComponent } from './Common-dialogs/confirmation-dialo
     useClass: AuthInterceptor,
     multi: true
   }],
-  entryComponents: [RegistartionComponent, AddSupplierComponent, ConfirmationDialogComponent],
+  entryComponents: [RegistartionComponent, AddSupplierComponent, ConfirmationDialogComponent, AddReportComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
