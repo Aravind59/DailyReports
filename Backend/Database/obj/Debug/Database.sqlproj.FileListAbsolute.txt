@@ -1,0 +1,9 @@
+E:\Arvind\Aravind\WebApplication1\Database\bin\Debug\Database.dacpac
+E:\Arvind\Aravind\WebApplication1\Database\bin\Debug\Database.dll
+E:\Arvind\Aravind\WebApplication1\Database\bin\Debug\Database.pdb
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\Database.dll
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\Database.pdb
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\Model.xml
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\refactor.xml
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\postdeploy.sql
+E:\Arvind\Aravind\WebApplication1\Database\obj\Debug\predeploy.sql

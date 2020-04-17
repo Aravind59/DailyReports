@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Users]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Users] (Table)
+     Alter
+       [dbo].[USP_UpsertUser] (Procedure)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_dbo.Users_UserId] (Foreign Key)
+     Create
+       [dbo].[FK_dbo.Users_UserId] (Foreign Key)
+     Refresh
+       [dbo].[USP_GetUserDetails] (Procedure)

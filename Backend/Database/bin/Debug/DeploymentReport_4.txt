@@ -1,0 +1,23 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Alter
+       [dbo].[Suppliers] (Table)
+       [dbo].[USP_GetSuppliers] (Procedure)
+       [dbo].[Usp_AddDailyReport] (Procedure)
+     Create
+       [dbo].[Usp_UpsertStation] (Procedure)
+       [dbo].[USP_UpsertSupplier] (Procedure)
+       [dbo].[USP_UpsertUser] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[USP_GetDailyReports] (Procedure)

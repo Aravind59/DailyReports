@@ -1,0 +1,5 @@
+E:\Arvind\Aravind\WebApplication1\WebApplication.Contracts\bin\Debug\DailyReports.Contracts.dll
+E:\Arvind\Aravind\WebApplication1\WebApplication.Contracts\bin\Debug\DailyReports.Contracts.pdb
+E:\Arvind\Aravind\WebApplication1\WebApplication.Contracts\obj\Debug\DailyReports.Contracts.csprojResolveAssemblyReference.cache
+E:\Arvind\Aravind\WebApplication1\WebApplication.Contracts\obj\Debug\DailyReports.Contracts.dll
+E:\Arvind\Aravind\WebApplication1\WebApplication.Contracts\obj\Debug\DailyReports.Contracts.pdb

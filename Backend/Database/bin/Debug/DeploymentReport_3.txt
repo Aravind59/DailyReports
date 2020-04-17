@@ -1,0 +1,30 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[DailyReports] (Table)
+       [dbo].[PriceRatings] (Table)
+       [dbo].[Stations] (Table)
+       [dbo].[Suppliers] (Table)
+       [dbo].[Users] (Table)
+       Default Constraint: unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+       [dbo].[FK_dbo.DailyReports_dbo.Suppliers_SupplierId] (Foreign Key)
+       [dbo].[FK_dbo.Stations_StationId] (Foreign Key)
+       [dbo].[FK_dbo.Users_UserId] (Foreign Key)
+       [dbo].[Usp_AddDailyReport] (Procedure)
+       [dbo].[USP_GetDailyReports] (Procedure)
+       [dbo].[USP_GetStationsList] (Procedure)
+       [dbo].[USP_GetSuppliers] (Procedure)
+       [dbo].[USP_GetUserDetails] (Procedure)
+
+** Supporting actions

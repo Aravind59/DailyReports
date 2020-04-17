@@ -1,0 +1,31 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[DailyReports]
+       [dbo].[PriceRatings]
+       [dbo].[Stations]
+       [dbo].[Suppliers]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+       unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+       unnamed constraint on [dbo].[DailyReports] (Default Constraint)
+     Table rebuild
+       [dbo].[DailyReports] (Table)
+       [dbo].[PriceRatings] (Table)
+       [dbo].[Stations] (Table)
+       [dbo].[Suppliers] (Table)
+
+** Supporting actions
+     Drop
+       [dbo].[FK_dbo.DailyReports_dbo.Suppliers_SupplierId] (Foreign Key)
+       [dbo].[FK_dbo.employees_dbo.Stations_StationId] (Foreign Key)
+     Create
+       [dbo].[FK_dbo.DailyReports_dbo.Suppliers_SupplierId] (Foreign Key)
+       [dbo].[FK_dbo.employees_dbo.Stations_StationId] (Foreign Key)

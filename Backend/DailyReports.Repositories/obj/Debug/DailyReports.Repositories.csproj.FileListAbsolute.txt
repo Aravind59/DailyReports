@@ -1,0 +1,9 @@
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\DailyReports.Repositories.dll
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\DailyReports.Repositories.pdb
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\DailyReports.Contracts.dll
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\Dapper.dll
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\DailyReports.Contracts.pdb
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\bin\Debug\Dapper.xml
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\obj\Debug\DailyReports.Repositories.csprojResolveAssemblyReference.cache
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\obj\Debug\DailyReports.Repositories.dll
+E:\Arvind\Aravind\WebApplication1\DailyReports.Repositories\obj\Debug\DailyReports.Repositories.pdb
