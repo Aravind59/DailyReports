@@ -1,0 +1,45 @@
+<div class="page-alignment">
+    <h4>Suppliers</h4>
+    <button mat-raised-button type="submit" class="add-new" (click)="openSupplierDialog()">Add New</button>
+    <table mat-table [dataSource]="suppliersList" class="mat-elevation-z8">
+        
+        <!-- log Number Column -->
+        <ng-container matColumnDef="logNumber">
+          <th mat-header-cell *matHeaderCellDef>Log Number </th>
+          <td mat-cell *matCellDef="let supplier"> {{supplier.logNumber}} </td>
+        </ng-container>
+ <!-- first Name  Column -->
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef>First Name</th>
+            <td mat-cell *matCellDef="let supplier"> {{supplier.firstName}} </td>
+          </ng-container>
+           <!-- last Name  Column -->
+          <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef>Last Name</th>
+            <td mat-cell *matCellDef="let supplier"> {{supplier.lastName}} </td>
+          </ng-container>
+      <!-- Address  Column -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address </th>
+        <td mat-cell *matCellDef="let supplier"> {{supplier.address}} </td>
+      </ng-container>
+      <!-- Mobile Number Column -->
+      <ng-container matColumnDef="mobileNumber">
+        <th mat-header-cell *matHeaderCellDef>Mobile Number</th>
+        <td mat-cell *matCellDef="let supplier"> {{supplier.mobileNumber}} </td>
+      </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let supplier" class="action-link"> 
+        <a (click)="openSupplierDialog(supplier)">Edit</a> | 
+        <a (click)="deletePopup(supplier.id)">Delete</a>  
+      </td>
+    </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let station; columns: displayedColumns;"></tr>
+      </table>
+      
+    </div>

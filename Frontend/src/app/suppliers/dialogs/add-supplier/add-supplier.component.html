@@ -1,0 +1,49 @@
+<div>
+    <div fxLayout="row" fxLayoutGap="10px" class="dialog-header" fxLayoutAlign="end">
+        <a (click)="closeSupplierForm()" style="float: right;">
+            <mat-icon>clear</mat-icon>
+        </a>
+        <div style="font-size: 25px;">Add/Update Supplier</div>
+    </div>
+<div>
+<form [formGroup]="supplierForm" (ngSubmit)="saveSupplier()" class="form">
+
+    <mat-form-field class="form-element">
+      <input matInput placeholder="First Name" formControlName="firstName" required>
+      <mat-error *ngIf="!supplierForm.get('firstName').hasError('required')">
+        First name is required
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form-element">
+        <input matInput placeholder="Last Name" formControlName="lastName" required>
+        <mat-error *ngIf="!supplierForm.get('lastName').hasError('required')">
+          Last name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Log Number" formControlName="logNumber" required>
+        <mat-error *ngIf="!supplierForm.get('logNumber').hasError('required')">
+            Log Number is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Address" formControlName="address" required>
+        <mat-error *ngIf="!supplierForm.get('address').hasError('required')">
+            Address is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-element">
+        <input matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
+        <mat-error *ngIf="!supplierForm.get('mobileNumber').hasError('required')">
+            Mobile Number is required
+        </mat-error>
+      </mat-form-field>
+
+    
+    <div class="form-element">
+      <button mat-raised-button type="submit" class="custom-btn" [disabled]="!supplierForm.valid">Submit Form</button>
+    </div>
+
+  </form>

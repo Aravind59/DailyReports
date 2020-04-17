@@ -1,0 +1,8 @@
+<mat-toolbar class="top-navbar-bg-color" *ngIf="isLoggedIn$ | async">
+    <app-menu></app-menu>
+   
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet> 
+</div>

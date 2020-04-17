@@ -1,0 +1,28 @@
+<div class="page-alignment">
+    <h4>Daily Reports</h4>
+    <table mat-table [dataSource]="reportsList" class="mat-elevation-z8">
+        
+        <!-- Station Name Column -->
+        <ng-container matColumnDef="logNumber">
+          <th mat-header-cell *matHeaderCellDef>Log Number </th>
+          <td mat-cell *matCellDef="let report"> {{report.logNumber}} </td>
+        </ng-container>
+      <!-- Address  Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef>Quantity </th>
+        <td mat-cell *matCellDef="let report"> {{report.quantity}} </td>
+      </ng-container>
+      <!-- Mobile Number Column -->
+      <ng-container matColumnDef="percentage">
+        <th mat-header-cell *matHeaderCellDef>Percentage</th>
+        <td mat-cell *matCellDef="let report"> {{report.percentage}} </td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td mat-cell *matCellDef="let report"> {{report.price}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let report; columns: displayedColumns;"></tr>
+      </table>
+      
+    </div>

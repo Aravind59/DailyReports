@@ -1,0 +1,87 @@
+<div>
+    <div fxLayout="row" fxLayoutGap="10px" class="dialog-header" fxLayoutAlign="end">
+        <a (click)="closeRegistrationFormPopup()" style="float: right;">
+            <mat-icon>clear</mat-icon>
+        </a>
+        <div style="font-size: 25px;">Create new user</div>
+    </div>
+<div>
+<form [formGroup]="registrationForm" (ngSubmit)="registerUser()" class="form">
+          
+      
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Station Name" formControlName="stationName" required>
+                          
+                <mat-error *ngIf="registrationForm.get('stationName').hasError('required')">
+                    Please enter station name.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+      
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Station Code" formControlName="stationCode" required>
+                          
+                <mat-error *ngIf="registrationForm.get('stationCode').hasError('required')">
+                    Please enter station code.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+      
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Station address" formControlName="address" required>
+                          
+                <mat-error *ngIf="registrationForm.get('address').hasError('required')">
+                    Please enter station address.</mat-error>
+            </mat-form-field>
+     
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Supplier First Name" formControlName="firstName" required>
+                          
+                <mat-error *ngIf="registrationForm.get('firstName').hasError('required')">
+                    Please enter first name.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+     
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Supplier Last Name" formControlName="lastName" required>
+                          
+                <mat-error *ngIf="registrationForm.get('lastName').hasError('required')">
+                    Please enter last name.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+      
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="User Name" formControlName="userName" required>
+                          
+                <mat-error *ngIf="registrationForm.get('userName').hasError('required')">
+                    Please enter username.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+     
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="password" formControlName="password" required>
+                          
+                <mat-error *ngIf="registrationForm.get('password').hasError('required')">
+                    Please enter password.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+       
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Email" formControlName="email" required>
+                          
+                <mat-error *ngIf="registrationForm.get('email').hasError('required')">
+                    Please enter a valid email.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+       
+            <mat-form-field class="form-element">
+                <input type="text" matInput placeholder="Mobile Number" formControlName="mobileNumber" required>
+                          
+                <mat-error *ngIf="registrationForm.get('mobileNumber').hasError('required')">
+                    Please enter mobile number.</mat-error>
+            </mat-form-field>
+            <!-- <p class="inform-text p-05">We will check in to help you get started</p> -->
+      
+
+    <div class="button">
+        <button class="custom-btn" type="submit" mat-button [disabled]="!registrationForm.valid">Submit</button>
+      </div>
+</form>
