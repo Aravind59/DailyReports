@@ -1,6 +1,6 @@
 # DailyReports
 
-Thia software to maintain the details and provide pre caluclations for all the milk collected from suppliers.
+This is a dailyreports software to maintain the details and provide pre caluclations for all the milk collected from suppliers.
 I have used the following technologies.Front end: Angular 8, Angular material; Backend: .NET => c#, Web API, Dapper ORM, SQL Server
 I have just started by adding Login and Registration and also added few pages for Suppliers and stations.
 Here I have used Token authentication with OAuth.
