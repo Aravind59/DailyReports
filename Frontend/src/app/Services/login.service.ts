@@ -42,7 +42,7 @@ registerUser(user : any) {
 
 logout(){
   localStorage.removeItem("userToken");
-     localStorage.removeItem("isUerLoggedIn");
+    
     this.loggedIn.next(false);
     this.router.navigate(["/login"]);
 }

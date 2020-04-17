@@ -12,12 +12,12 @@ export class SupplierService {
   }
 
    
-  getSuppliers(stationId){
+  getSuppliers(){
     console.log(baseUrl);
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.get(baseUrl + "SuppliersApi/GetSuppliers?stationId=" + stationId, httpOptions)
+    return this.http.get(baseUrl + "SuppliersApi/GetSuppliers", httpOptions)
   }
 
   upsertSupplier(supplier: any){

@@ -41,6 +41,7 @@ namespace DailyReports.Providers
                 identity.AddClaim(new Claim(ClaimTypes.Name, context.UserName));
                 identity.AddClaim(new Claim("IsAdmin", userDetails.IsAdmin.ToString(), ClaimValueTypes.Boolean));
                 identity.AddClaim(new Claim("UserId", userDetails.Id.ToString(), ClaimValueTypes.Integer32));
+                identity.AddClaim(new Claim("StationId", userDetails.StationId.ToString(), ClaimValueTypes.Integer32));
                 //identity.AddClaim(new Claim("RoleId", roleId.ToString(), ClaimValueTypes.String));
                 var userInfo = new Dictionary<string, string>
                 {

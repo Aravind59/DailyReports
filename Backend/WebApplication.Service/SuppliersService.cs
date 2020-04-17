@@ -20,13 +20,13 @@ namespace DailyReports.Service
         }
 
        
-        public List<Supplier> GetSuppliers(int stationId, LoggedInUser loggedInUser, List<ValidationMessage> validationMessages)
+        public List<Supplier> GetSuppliers(LoggedInUser loggedInUser, List<ValidationMessage> validationMessages)
         {
             if (!CommonValidationHelper.ValidateLoggedInUser(loggedInUser, validationMessages))
             {
                 return null;
             }
-            var result = _suppliersRepository.GetSuppliersList(stationId, validationMessages);
+            var result = _suppliersRepository.GetSuppliersList(loggedInUser.StationId ?? 0, validationMessages);
             return result;
         }
 
@@ -36,6 +36,8 @@ namespace DailyReports.Service
             {
                 return null;
             }
+
+            supplier.StationId = loggedInUser.StationId ?? 0;
             var result = _suppliersRepository.AddSupplier(supplier, validationMessages);
             return result;
         }

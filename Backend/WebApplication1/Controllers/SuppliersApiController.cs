@@ -23,13 +23,13 @@ namespace DailyReports.Controllers
         [HttpGet]
         [HttpOptions]
         [Route("SuppliersApi/GetSuppliers")]
-        public JsonResult<MyJsonResult> GetSuppliers(int stationId)
+        public JsonResult<MyJsonResult> GetSuppliers()
         {
             try
             {
                 var validationMessages = new List<ValidationMessage>();
 
-                var result = _suppliersService.GetSuppliers(stationId, LoggedInUser, validationMessages);
+                var result = _suppliersService.GetSuppliers(LoggedInUser, validationMessages);
 
                 MyJsonResult myJsonResult;
                 if (UiHelper.CheckForValidationMessages(validationMessages, out myJsonResult))

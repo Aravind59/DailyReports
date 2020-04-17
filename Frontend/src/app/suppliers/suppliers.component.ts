@@ -20,8 +20,8 @@ export class SuppliersComponent implements OnInit {
 
   
   getSuppliers(){
-    var stationId = 1;
-    this.supplierService.getSuppliers(stationId).subscribe((response : any) => {
+        
+    this.supplierService.getSuppliers().subscribe((response : any) => {
       console.log(response);
       if(response.success){
        this.suppliersList = response.data;

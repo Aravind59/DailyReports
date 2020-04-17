@@ -25,13 +25,27 @@ namespace DailyReports.Controllers
             }
         }
 
+        public int StationId
+        {
+            get
+            {
+
+                var userClaims = Request.GetRequestContext().Principal as ClaimsPrincipal;
+                if (userClaims == null || !userClaims.HasClaim(i => i.Type == "StationId"))
+                    return default(int);
+
+                return Convert.ToInt32(userClaims.FindFirst(i => i.Type == "StationId").Value);
+            }
+        }
+
         public LoggedInUser LoggedInUser
         {
             get
             {
                 return new LoggedInUser
                 {
-                    UserId = UserId
+                    UserId = UserId,
+                    StationId = StationId
                 };
             }
             set

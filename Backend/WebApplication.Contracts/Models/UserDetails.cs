@@ -10,6 +10,7 @@ namespace DailyReports.Contracts.Models
         public string Password { get; set; }
         public bool IsActive { get; set; }
         public bool IsAdmin { get; set; }
+        public int? StationId { get; set; }
         public DateTime CreatedDateTime { get; set; }
         public DateTime UpdatedDateTime { get; set; }
     }

@@ -2,7 +2,7 @@
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[StationId] INT NOT NULL,
-	[UserId] INT,
+	[UserId] INT NULL,
 	[LogNumber] VARCHAR(50),
 	[FirstName] VARCHAR(50),
 	[LastName] VARCHAR(50),

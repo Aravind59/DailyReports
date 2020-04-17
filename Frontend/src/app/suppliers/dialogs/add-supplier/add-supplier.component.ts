@@ -26,8 +26,7 @@ export class AddSupplierComponent implements OnInit {
   }
 
   saveSupplier(){
-    var supplier = this.supplierForm.value;
-    supplier.stationId = 1;
+    var supplier = this.supplierForm.value;    
     if(this.supplier != null){
       supplier.id = this.supplier.id;
       supplier.isActive = true;
