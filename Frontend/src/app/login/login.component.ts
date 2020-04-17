@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         console.log(response);
         if(response.access_token != null){
          
-          this.router.navigate(['stations']);
+          this.router.navigate(['suppliers']);
         }else{
 this.validationMessage = "The given uername or password are wrong!"
         }
